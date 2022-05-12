@@ -87,6 +87,8 @@ var handleForgotPassword = async (req, res) => {
 
   try {
     const result = await sgMail.send(msg)
+    console.log(result, "sent result")
+    res.status(200).json({message : "reset password link sent to email"})
   } catch (err) {
     console.log('send grid', err)
   }

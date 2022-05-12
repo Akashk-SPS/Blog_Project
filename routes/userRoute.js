@@ -88,9 +88,10 @@ router.get('/login',  (req, res) => {
     })
   })
 
-  //router.post('/verifyEmail', UserController.verifyUser)
   
-  router.get('/forgotPassword', UserController.handleForgotPassword)
+   router.post('/forgotPassword', UserController.handleForgotPassword)
+  
+
   
   router.get('/resetPassword', (req, res) => {
     res.render('ResetPassword', { title: 'reset password' , layout: './Layout/FullWidthLayout' })
